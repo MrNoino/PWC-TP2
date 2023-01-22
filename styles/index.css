@@ -1,0 +1,458 @@
+/*
+    ########################################
+    ##                                    ##
+    ## Título: Quem quer ser milionário?  ##
+    ##                                    ##
+    ########################################
+    ##                                    ##
+    ## Descrição: Website inspirado no    ##
+    ## programa televisivo "Quem quer     ##
+    ## ser milionário", projeto           ##
+    ## desenvolvido no âmbito da Unidade  ##
+    ## Curricular de Programação Web      ##
+    ## Cliente, como trabalho de          ##
+    ## avaliação Nº2.                     ##
+    ##                                    ##
+    ########################################
+    ##                                    ##
+    ## Autor: Nuno Lopes                  ##
+    ##                                    ##
+    ########################################
+    ##                                    ##
+    ## Data: 25/07/2021                   ##
+    ##                                    ##
+    ########################################
+
+*/
+
+*{
+
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+html, body {
+
+    height: 100%;
+
+}
+
+.page{
+
+    height: 100%;
+
+}
+
+/*esconde o conteúdo e só é mostrado caso o javascript esteja habilitado */
+.js-unavailable{
+
+    display: none;
+
+}
+
+.navbar-style{
+
+    background-color: rgba(25, 25, 112, 0.6) !important;
+
+}
+
+.full-page{
+
+    height: 100%;
+    border-bottom: 2px solid gray;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* esconder scrollbar para IE e Edge */
+    
+}
+
+/* esconder scrollbar para Chrome, Safari e Opera */
+.full-page::-webkit-scrollbar {
+    display: none;
+}
+
+.col-large-margin-top{
+
+    margin-top: 85px !important;
+
+}
+
+.no-padding{
+
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+
+}
+
+.home{
+
+    background-color: #00BFFF;
+
+}
+
+.main-title{
+
+    text-align: center;
+
+}
+
+.sub-title{
+
+    text-align: center;
+
+}
+
+.article-content{
+
+    text-align: justify;
+
+}
+
+.game{
+
+    background-color: #4169E1;
+
+}
+
+.text-input{
+
+    transition: .5s;
+    width: 100%;
+    height: 40px;
+    color: #000000;
+    padding-left: 5px; 
+    background-color: #FFFFFF;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px #080808;
+
+}
+
+.text-input:focus{
+
+    transition: .5s;
+    box-shadow: 0 0 10px #8F8F8F;
+    
+
+}
+
+
+.btn-play{
+
+    transition: .5s;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #F8F8F8;
+    color: #20B2AA;
+    border: 3px solid #20B2AA;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #FFFFFF;
+    outline: none;
+
+}
+
+.btn-play:hover{
+
+    transition: .5s;
+    transform: scale(1.05); 
+    border: 3px solid #32CD32;
+    box-shadow: 0 0 10px #080808;
+
+}
+
+.display-message{
+
+    text-align: left;
+    
+
+}
+
+.message-cancel{
+
+    text-decoration: none;
+    color: #FFD700;
+    cursor: pointer;
+
+}
+
+.message-cancel:hover {
+
+    color: #FFD700;
+
+}
+
+.question-title{
+
+    text-align: center;
+
+}
+
+.question-body{
+
+    text-align: justify;
+    font-size: 18px;
+
+}
+
+.timer-container{
+
+    text-align: center;
+
+}
+
+.timer-body{
+
+    font-size: 25px;
+
+}
+
+.help-container{
+
+    text-align: center;
+
+}
+
+.help{
+
+    width: 50%;
+    margin: 0 auto;
+    display: none;
+    transition: .5s;
+    height: 30px;
+    border: 2px solid #FFFFFF;
+    background-color: #0000FF;
+    color: #FFFFFF;
+    border-radius: 15px;
+    outline: none;
+    box-shadow: 0 0 10px #080808; 
+
+}
+
+.help:hover{
+
+    transition: .5s;
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px #FFFFFF;
+
+}
+
+.container-options{
+
+    text-align: center;
+
+}
+
+.container-options button{
+
+    display: none;
+
+}
+
+.btn-options{
+
+    transition: .5s;
+    width: 100%;
+    height: 50px;
+    border: 2px solid #0000FF;
+    background-color: #FFFFFF;
+    color: #0000FF;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 0 10px #FFFFFF; 
+
+}
+
+.btn-options:hover{
+
+    transition: .5s;
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px #080808;
+
+}
+
+.btn-quit{
+
+    transition: .5s;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #FF0000;
+    background-color: #FFFFFF;
+    color: #FF0000;
+    border-radius: 20px;
+    outline: none;
+    box-shadow: 0 0 10px #FFFFFF; 
+    display: none;
+
+}
+
+.btn-quit:hover{
+
+    transition: .5s;
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px #080808;
+
+}
+
+.btn-continue{
+
+    transition: .5s;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #008000;
+    background-color: #FFFFFF;
+    color: #008000;
+    border-radius: 20px;
+    outline: none;
+    box-shadow: 0 0 10px #FFFFFF; 
+    display: none;
+
+}
+
+.btn-continue:hover{
+
+    transition: .5s;
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px #080808;
+
+}
+
+.highscore{
+
+    background-color: #663399;
+
+}
+
+.score-board{
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.score-board tr{
+
+    border-bottom: 2px solid #FFFFFF;
+
+}
+
+.score-board th, .score-board td{
+
+    padding: 5px;
+    width: 33%;
+
+}
+
+.first-place{
+
+    color: #FFD700;
+
+}
+
+.second-place{
+
+    color: #E6E6FA;
+
+}
+
+.third-place{
+
+    color: #CD853F;
+
+}
+
+.questions{
+
+    background-color: #1E90FF;
+
+}
+
+.new-question-btn{
+
+    transition: .5s;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #008000;
+    background-color: #FFFFFF;
+    color: #008000;
+    border-radius: 20px;
+    outline: none;
+    box-shadow: 0 0 10px #FFFFFF;
+
+}
+
+.new-question-btn:hover{
+
+    transition: .5s;
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px #080808;
+
+}
+
+.remove-btn{
+
+    width: 100%;
+    height: 30px;
+    border: 2px solid #DAA520;
+    background-color: #FFFFFF;
+    color: #DAA520;
+    border-radius: 15px;
+    outline: none;
+
+}
+
+@media only screen and (max-width: 760px) {
+
+    .article-content{
+
+        font-size: 12px;
+        padding-left: 1em;
+        
+
+    }
+
+    button{
+
+        font-size: 12px !important;
+
+    }
+
+    input{
+
+        font-size: 12px !important;
+
+    }
+    
+    p{
+
+        font-size: 12px !important;
+
+    }
+
+    .message-cancel{
+
+        font-size: 12px;
+
+    }
+
+    .score-board th, .score-board td{
+
+        font-size: 12px;
+
+    }
+
+    label{
+
+        font-size: 12px !important;
+
+    }
+    
+}

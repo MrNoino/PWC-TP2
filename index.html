@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<!--  
+
+    ########################################
+    ##                                    ##
+    ## Título: Quem quer ser milionário?  ##
+    ##                                    ##
+    ########################################
+    ##                                    ##
+    ## Descrição: Website inspirado no    ##
+    ## programa televisivo "Quem quer     ##
+    ## ser milionário", projeto           ##
+    ## desenvolvido no âmbito da Unidade  ##
+    ## Curricular de Programação Web      ##
+    ## Cliente, como trabalho de          ##
+    ## avaliação Nº2.                     ##
+    ##                                    ##
+    ########################################
+    ##                                    ##
+    ## Autor: Nuno Lopes                  ##
+    ##                                    ##
+    ########################################
+    ##                                    ##
+    ## Data: 25/07/2021                   ##
+    ##                                    ##
+    ########################################
+
+-->
+
+<html lang="pt">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="#">
+
+        <link rel="stylesheet" href="./styles/index.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <title>Quem quer ser Milionário?</title>
+
+    </head>
+
+    <body>
+
+        <!-- Caso o browser não suporte javascript ou esteja desabilitado, desabilitamos o website -->
+        <noscript>
+
+            <h1>O browser não suporta javascript ou está desabilitado, por favor verifique.</h1>
+
+        </noscript>
+
+        <!-- Escondemos a pagina inteira por defeito e mostramos com o javascript -->
+        <div class="page js-unavailable">
+
+            <!-- Navbar bootstrap com algumas modificações -->
+            <nav class="navbar fixed-top navbar-dark navbar-style">
+
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="./index.html">
+
+                        <img src="./assets/logotipo.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
+
+                    </a>
+
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    
+                    <span class="navbar-toggler-icon"></span>
+
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                    <ul class="navbar-nav">
+
+                      <li class="nav-item">
+
+                        <a id="link_home" class="nav-link active" aria-current="page" href="./index.html#home">Ínicio</a>
+
+                      </li>
+
+                      <li class="nav-item">
+
+                        <a id="link_game" class="nav-link" href="./index.html#game">Jogo</a>
+
+                      </li>
+
+                      <li class="nav-item">
+
+                        <a id="link_score" class="nav-link" href="./index.html#score">Pontuação</a>
+
+                      </li>
+
+                      <li class="nav-item">
+
+                        <a id="link_questions" class="nav-link" href="./index.html#questions">Perguntas</a>
+
+                      </li>
+
+                    </ul>
+
+                  </div>
+
+                </div>
+
+              </nav>
+
+              <!-- Primeira landing page contendo o greal e regras do jogo -->
+              <div id="home" class="container-fluid full-page home">
+
+                <div class="row">
+
+                    <div class="col-12 col-large-margin-top">
+
+                        <h1 class="main-title mt-5">
+
+                            Quem quer ser Milionário?
+
+                        </h1>
+                        
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-5">
+
+                        <article>
+
+                            <h3 class="sub-title">O jogo</h3>
+
+                            <p class="article-content mt-5">
+                                O jogo <strong>"Quem quer ser milionário"</strong>, é uma adaptação do programa <i>" Who Wants to Be a Millionaire?"</i> 
+                                original da televisão Britânica para a televisão pública Portuguesa, a RTP.
+                                <br>
+                                <br>
+                                O jogo tem um máximo de 15 rondas e caso o jogador acerte consecutivamente todas as rondas até ao final, 
+                                ganha uma quantia de 100.000 €.
+                                <br>
+                                <br>
+                                No entanto, este jogo apresentado aqui tem como objetivo apenas o lazer e divertimento dos utilizadores, bem como 
+                                contribuir para a cultura geral dos mesmos. 
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-5">
+
+                        <article>
+
+                            <h3 class="sub-title">Regras</h3>
+
+                            <ol class="article-content mt-5">
+
+                                <li>O jogo tem no máximo <strong>15 rodadas</strong>.</li>
+                                <li>São disponibilizadas sempre <strong>4 hipóteses</strong> de resposta, estando apenas uma correta.</li>
+                                <li>O jogador tem acesso a <strong>duas ajudas</strong>, o 50:50 e o Telefonar a um amigo.
+                                    <ol>
+                                        <li>O 50:50 consiste em eliminar <strong>duas das três respostas incorretas</strong>.</li>
+                                        <li>O Telefonar a um amigo consiste em revelar a <strong>resposta correta</strong>.</li>
+                                        <li>As ajudas referidas acima apenas podem ser utilizadas <strong>uma vez por jogo</strong>.</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    Para cada pergunta, o jogador tem <strong>um minuto</strong> para responder, perdendo em caso de exceder esse tempo sem responder.
+                                </li>
+
+                            </ol>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Landing page destinada ao jogo em si -->
+            <div id="game" class="container-fluid full-page game">
+
+                <div class="row">
+
+                    <div class="col-sm-1 col-md-2 col-xl-3 mt-3"></div>
+
+                    <div class="col-12 col-sm-10 col-md-8 col-xl-6  mt-5 no-padding">
+
+                        <form class="container-fluid">
+
+                            <div class="row">
+
+                                <div class="col-12 mt-5">
+                                    
+                                    <h2 class="main-title">O jogo</h2>
+
+                                </div>
+
+                                <div class="col-7 col-sm-8 col-md-9 mt-5">
+
+                                    <input id="username" class="text-input" type="text" placeholder="Nome de utilizador" maxlength="100" required/>
+
+                                </div>
+
+                                <div class="col-5 col-sm-4 col-md-3 mt-5">
+
+                                    <input id="play" class="btn-play" type="button" value="Jogar"/> 
+
+                                </div>
+
+                                <div class="col-12"><span id="message" class="display-message"></span><a id="message_cancel" class="message-cancel"></a></div>
+
+                                
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="row mt-3">
+
+                    <div class="col-sm-1 col-md-2"></div>
+                                
+                    <div class="col-12 col-sm-10 col-md-8">
+                        
+                        <div class="container-fluid">
+
+                            <div class="row mt-3">
+
+                                <div class="col-12"><h2 id="question_title" class="question-title"> </h2></div>
+                                <div class="col-12 mt-5"><p id="question" class="question-body"></p></div>
+
+                            </div>
+
+                            <div class="row mt-3">
+
+                                <div class="col-12 timer-container"><p id="timer" class="timer-body"></p></div>
+
+                            </div>
+
+                            <div class="row mt-3">
+
+                                <div class="col-lg-2 mt-2"></div>
+
+                                <div class="col-12 col-md-6 col-lg-4 mt-2 help-container">
+                                    <button id="help1" class="help">
+                                        50:50
+                                    </button>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-4 mt-2 help-container">
+                                    <button id="help2" class="help">
+                                        Tel. Amigo
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div class="row mt-3">
+                                
+                                <div class="col-12 col-md-6 col-lg-3 mt-2 container-options">
+                                    <button name="option" class="btn-options">Opção 1</button>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3 mt-2 container-options">
+                                    <button name="option" class="btn-options">Opção 2</button>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3 mt-2 container-options">
+                                    <button name="option" class="btn-options">Opção 3</button>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3 mt-2 container-options ">
+                                    <button name="option" class="btn-options">Opção 4</button>
+                                </div>
+
+                            </div>
+
+                            <div class="row mt-3">
+                                
+                                <div class="col-md-2 col-lg-3 mt-2 mb-3"></div>
+
+                                <div class="col-6 col-md-4 col-lg-3 mt-2 mb-3">
+                                    <button id="quit" class="btn-quit">Terminar</button>
+                                </div>
+
+                                <div class="col-6 col-md-4 col-lg-3 mt-2 mb-5">
+                                    <button id="continue" class="btn-continue">Continuar</button>
+                                </div>
+
+                                
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Landing Page para mostrar o score board -->
+            <div id="score" class="container-fluid full-page highscore">
+
+                <div class="row">
+
+                    <div class="col-12 mt-5">
+                                    
+                        <h2 class="main-title  mt-5">Tabela de pontuação</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-1 col-lg-2 mt-5"></div>
+                    <div class="col-12 col-md-10 col-lg-8 mt-3 mb-3">
+                                    
+                        <table id="score_board" class="score-board">
+                            <thead>
+                                <tr><th>Posição</th><th>Jogador</th><th>Sequência de acertos</th></tr>
+                            </thead>
+                            <tbody id="score_board_body">
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Landing page para a listagem, inserção e remoção de novas questões para o jogo -->
+            <div id="questions" class="container-fluid full-page questions">
+
+                <div class="row">
+
+                    <div class="col-12 mt-5">
+                        
+                        <h2 class="main-title mt-5">Questões</h2>
+
+                    </div>
+
+                </div>
+
+                <div id="display_questions" class="row">
+
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-12 mt-5">
+                        
+                        <h2 class="main-title">Adicionar Questões</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-1 col-lg-2 mt-3"></div>
+                    <div class="col-12 col-md-10 col-lg-8 mt-3 mb-3">
+                                    
+                        <form class="container-fluid">
+
+                            <div class="row">
+
+                                <div class="col-md-2 col-lg-3 mt-3"></div>
+                                <div class="col-12 col-md-8 col-lg-6 mt-3">
+
+                                    <input class="text-input" id="new_question" placeholder="Questão" type="text" autocomplete="off" required/>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-1 mt-3"></div>
+
+                                <div class="col-2 mt-5">
+
+                                    <input name="level" type="radio" value="1" checked/>
+                                    <label>Nível 1</label>
+
+                                </div>
+                                <div class="col-2 mt-5">
+
+                                    <input name="level" type="radio" value="2"/>
+                                    <label>Nível 2</label>
+
+                                </div>
+                                <div class="col-2 mt-5">
+
+                                    <input name="level" type="radio" value="3"/>
+                                    <label>Nível 3</label>
+
+                                </div>
+                                <div class="col-2 mt-5">
+
+                                    <input name="level" type="radio" value="4"/>
+                                    <label>Nível 4</label>
+
+                                </div>
+                                <div class="col-2 mt-5">
+
+                                    <input name="level" type="radio" value="5"/>
+                                    <label>Nível 5</label>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-2 col-lg-3 mt-5"></div>
+                                <div class="col-12 col-md-8 col-lg-6 mt-5">
+
+                                    <input class="text-input questions-input" id="answer" placeholder="Resposta" type="text" autocomplete="off" required/>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-2 col-lg-3 mt-3"></div>
+                                <div class="col-12 col-md-8 col-lg-6 mt-3">
+                                    
+                                    <input class="text-input questions-input" id="option1" placeholder="Opção 1" type="text" autocomplete="off" required/>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-2 col-lg-3 mt-3"></div>
+                                <div class="col-12 col-md-8 col-lg-6 mt-3">
+
+                                    <input class="text-input questions-input" id="option2" placeholder="Opção 2" type="text" autocomplete="off" required/>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-2 col-lg-3 mt-3"></div>
+                                <div class="col-12 col-md-8 col-lg-6 mt-3">
+
+                                    <input class="text-input questions-input" id="option3" placeholder="Opção 3" type="text" autocomplete="off" required/>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-7 mt-3"></div>
+
+                                <div class="col-5 col-md-3 col-lg-2 mt-3">
+
+                                    <input id="add_new_question" class="new-question-btn" type="button" value="Adicionar"/>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Tag abaixo comentada serve para carregar exemplos para a localStorage -->
+        <script src="./default_localStorage.js"></script>
+        <!-- Script com funções gerais da pagina -->
+        <script src="./js/index.js"></script>
+        <!-- Script destinado às funcionalidades do jogo -->
+        <script src="./js/game.js"></script>
+        <!-- Script destinado à impressão do score board -->
+        <script src="./js/score.js"></script>
+        <!-- Script destinado à adição de questões -->
+        <script src="./js/questions.js"></script>
+
+    </body>
+</html>
